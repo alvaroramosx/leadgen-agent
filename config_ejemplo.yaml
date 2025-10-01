@@ -1,0 +1,12 @@
+# Ejemplo de configuración para Leadgen Agent
+# Copia este archivo a `config.yaml` y rellena los valores.
+
+sector: "restaurantes"          # Sector o actividad a buscar
+provincia: "Madrid"             # Provincia
+municipio: "Alcobendas"         # Municipio
+apiKey: "TU_API_KEY"            # API Key de Google (Places API New habilitada)
+max: 50                          # Máximo de resultados
+timeoutMs: 15000                 # Timeout en milisegundos para requests
+outputDir: data                  # Carpeta donde se guardará el CSV
+
+
