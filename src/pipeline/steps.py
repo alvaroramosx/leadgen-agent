@@ -78,6 +78,9 @@ def fetch_leads(ctx: Dict[str, Any]) -> List[Dict[str, Any]]:
             "phone": p.get("phone", ""),
             "website": website,
             "email": email,
+            # Campos adicionales solicitados para el CSV
+            "sector": ctx.get("sector", ""),
+            "ubicacion": ctx.get("municipio", ""),
         }
         leads.append(lead)
         print(f"+ {lead['name']} | {website or 'sin web'} | {email or 'sin email'}")

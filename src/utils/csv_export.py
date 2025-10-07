@@ -12,7 +12,7 @@ def export_to_csv(leads: list[dict], output_path: Path) -> None:
     ensure_dir(output_path.parent)
     with output_path.open("w", newline="", encoding="utf-8") as f:
         writer = csv.writer(f)
-        writer.writerow(["Nombre", "Direccion", "Telefono", "Web", "Email"])
+        writer.writerow(["Nombre", "Direccion", "Telefono", "Web", "Email", "Sector", "Ubicacion"])
         for lead in leads:
             writer.writerow([
                 lead.get("name", ""),
@@ -20,6 +20,8 @@ def export_to_csv(leads: list[dict], output_path: Path) -> None:
                 lead.get("phone", ""),
                 lead.get("website", ""),
                 lead.get("email", ""),
+                lead.get("sector", ""),
+                lead.get("ubicacion", ""),
             ])
 
 
